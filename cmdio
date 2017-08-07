@@ -1,0 +1,14 @@
+#!cmd alpine bash wget ca-certificates
+#!/bin/bash
+wget --no-check-certificate --quiet https://github.com/deathowl/route53er/releases/download/1.0.0/route53er-linux -O /route53er 
+
+chmod +x /route53er
+if [ -z "$1" ]; 
+then
+	/route53er
+elif [ "$1" = "delete" ]
+then
+    /route53er --operation=delete --domain=$2
+else
+    /route53er --operation=add --ip=$1 --domain=$2
+fi
