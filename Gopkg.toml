@@ -1,0 +1,15 @@
+[[constraint]]
+  branch = "master"
+  name = "github.com/mitchellh/goamz"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/olekukonko/tablewriter"
+
+[[constraint]]
+  name = "github.com/segmentio/go-route53"
+  version = "0.2.0"
+
+[[constraint]]
+  name = "github.com/sirupsen/logrus"
+  version = "1.0.2"
