@@ -10,7 +10,16 @@ run on your host:
 * go build .
 * ZONE=ZONE_ID AWS_ACCESS_KEY_ID=ACCES_KEY_ID AWS_SECRET_ACCESS_KEY=ACCESS_KEY ./route53er --operation=list
 
+Run on cmd.io
+* cat ./cmdio | ssh alpha.cmd.io :create route53er -
+* ssh dalpha.cmd.io  :env route53er set AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_KEY
+* ssh dalpha.cmd.io  :env route53er set AWS_ACCESS_KEY_ID=ACCESSKEY
+* ssh dalpha.cmd.io  :env route53er set ZONE=your_zone_id
+
+
+
 Supported operations:
 * list
 * add : required parameters --ip:Target for the A record --domain: domain
 * delete: required parameters: --domain
+
